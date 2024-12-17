@@ -19,8 +19,8 @@ public class ExtentManager {
 	 
 	   public static void setExtent() {
 		  // Create object of  htmlrporter
-		  htmlReporter =new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/extentReport/MyReport_"+BaseClassofOrange.getCurrentTime()+".html");
-		// htmlReporter =new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/ExtentReport/"+"MyReport.html");
+		 //htmlReporter =new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/extentReport/MyReport_"+BaseClassofOrange.getCurrentTime()+".html");
+		 htmlReporter =new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/ExtentReport/"+"MyReport.html");
 		 // htmlReporter =new ExtentHtmlReporter("C:\\Users\\C297909\\eclipse-workspace\\com.myproject\\test-output\\ExtentReport"+"My.html");
 	 
 		  //below line will load extend config file
