@@ -7,11 +7,14 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.orange.base.BaseClassofOrange;
+import com.orange.dataprovider.DataProviders;
 import com.orange.pageobjects.DashboardPage;
+import com.orange.pageobjects.LoginPage;
+import com.orange.utility.Log;
 
 public class DashboardTest extends BaseClassofOrange {
 	DashboardPage dash;
-
+LoginPage login;
 	@Parameters("browser")
 
 	@BeforeMethod (groups={"Smoke","Sanity","Regression"}) 
@@ -22,8 +25,12 @@ public class DashboardTest extends BaseClassofOrange {
 	public void teardown() {
 		getDriver().quit();
 	}
-	@Test (groups={"Smoke","Sanity","Regression"})
-	public void DashBooardOpened() throws Throwable{
+	@Test (dataProvider = "CredentialsToLoginIn", dataProviderClass = DataProviders.class,groups={"Smoke","Sanity","Regression"})
+	public void DashBooardOpened(String User,String pass) throws Throwable{
+		Log.startTestCase("AdminIsOpened");
+		login= new LoginPage();
+		Log.info("user will be login ");
+		login.Login(User, pass);		
 		dash= new DashboardPage();
 		dash.ValidateDashboardOpened();
 		boolean result=dash.ValidateDashboardOpened();

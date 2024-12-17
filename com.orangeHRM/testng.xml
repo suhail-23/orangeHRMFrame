@@ -4,7 +4,7 @@
 <listeners>
 <listener class-name="com.orange.utility.ListnerClass"></listener></listeners>
   <test thread-count="5" name="Test">
-  <parameter name="browser" value="Chrome"></parameter>
+  <parameter name="browser" value="Chrome"/>
   <groups>
   <run><include name="Sanity"></include></run></groups>
     <classes>
