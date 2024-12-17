@@ -26,7 +26,7 @@ public class ExtentManager {
 		  //below line will load extend config file
 		 // C:\Users\C297909\eclipse-workspace\com.myproject\extent-config.xml
 		 // htmlReporter.loadXMLConfig("C:\\Users\\C297909\\eclipse-workspace\\com.myproject\\extent-config.xml");
-
+//update
 		 htmlReporter.loadXMLConfig(System.getProperty("user.dir")+"/extent-config.xml");
 		  //htmlReporter.config().setDocumentTitle("AUTOMATION Test Report");
 		 // htmlReporter.config().setReportName("Orange HRM Test Automation Report");
