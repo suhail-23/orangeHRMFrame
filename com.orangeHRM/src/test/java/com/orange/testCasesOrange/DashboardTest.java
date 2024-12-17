@@ -36,5 +36,15 @@ LoginPage login;
 		boolean result=dash.ValidateDashboardOpened();
 		Assert.assertTrue(result);
 	}
-	
+	@Test (dataProvider = "CredentialsToLoginIn", dataProviderClass = DataProviders.class,groups={"Smoke","Sanity","Regression"})
+	public void DashBooardOpenedFailed(String User,String pass) throws Throwable{
+		Log.startTestCase("AdminIsOpened");
+		login= new LoginPage();
+		Log.info("user will be login ");
+		login.Login(User, pass);		
+		dash= new DashboardPage();
+		dash.ValidateDashboardOpened();
+		boolean result=dash.ValidateDashboardOpened();
+		Assert.assertTrue(false);
+	}
 }
